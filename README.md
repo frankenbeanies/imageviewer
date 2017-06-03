@@ -1,7 +1,7 @@
 ImageViewer
 ===========
 
-[![release](http://github-release-version.herokuapp.com/github/frankenbeanies/imageviewer/release.svg?style=flat)]
+![release](http://github-release-version.herokuapp.com/github/frankenbeanies/imageviewer/release.svg?style=flat) [![Build Status](https://travis-ci.org/frankenbeanies/imageviewer.svg?branch=master)](https://travis-ci.org/frankenbeanies/imageviewer)
 
 A simple application for viewing images through OpenCV
 
