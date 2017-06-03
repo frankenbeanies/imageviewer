@@ -1,9 +1,9 @@
 #include "Validate.hpp"
 
 bool Validate::ValidateArgumentCount(int count){
-    return true;
+    return count == 2;
 }
 
 bool Validate::ValidateImageData(cv::Mat image){
-    return true;
+    return image.data;
 }

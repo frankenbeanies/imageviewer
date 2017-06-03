@@ -15,12 +15,14 @@ TEST_CASE("ValidateArgumentCount returns true when argument count == 2", "[valid
 
 TEST_CASE("ValidateImageData returns false when image does not have data", "[validate]"){
     cv::Mat image;
-
+    
     REQUIRE_FALSE(Validate::ValidateImageData(image));
 }
 
 TEST_CASE("ValidateImageData returns true when image does have data", "[validate]"){
-    cv::Mat image = cv::imread("drive-in.jpg", 1);
-    
+    cv::Mat image;
+    unsigned char* data = new unsigned char[1500];
+    image.data = data;
+
     REQUIRE(Validate::ValidateImageData(image));
 }
