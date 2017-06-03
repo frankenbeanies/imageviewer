@@ -3,6 +3,16 @@ ImageViewer
 
 A simple application for viewing images through OpenCV
 
+Platforms
+---------
+
+Tested on Ubuntu 16.04 LTS
+
+Distribution
+------------
+
+ImageViewer can be built from source. Binaries can also be downloaded from the releases page. 
+
 Building from Source
 --------------------
 
@@ -27,6 +37,10 @@ cmake .
 make
 ```
 
+Tests will be located at Tests/Tests
+
+The Application will be located at App/ImageViewer
+
 Running Tests
 -------------
 
@@ -35,3 +49,16 @@ After building the project, you can run the tests via
 ```
 ./Tests/Tests
 ```
+
+Usage
+-----
+
+After bulding the project, ImageViewer will be located in the App directory.
+
+Usage is as follows: 
+
+```
+./ImageViewer <path_to_image>
+```
+
+You can move the ImageViewer binary to whatever location you wish.
