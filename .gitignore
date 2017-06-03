@@ -1,0 +1,9 @@
+#Cmake
+*.cmake 
+CMakeCache.txt
+Makefile
+CMakeFiles
+objs
+
+#executables
+Tests/Tests 
