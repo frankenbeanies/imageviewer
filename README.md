@@ -1,12 +1,19 @@
 ImageViewer
 ===========
 
+[![release](http://github-release-version.herokuapp.com/github/frankenbeanies/imageviewer/release.svg?style=flat)]
+
 A simple application for viewing images through OpenCV
 
 Platforms
 ---------
 
 Tested on Ubuntu 16.04 LTS
+
+License
+-------
+
+[MIT](LICENSE)
 
 Distribution
 ------------
