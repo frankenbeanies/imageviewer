@@ -2,6 +2,7 @@
 #include <string>
 #include <opencv2/opencv.hpp>
 
+#include "FileDialog.hpp"
 #include "Validate.hpp"
 
 int main(int argc, char** argv){
@@ -9,28 +10,9 @@ int main(int argc, char** argv){
     bool dialogUsed = false;
 
     if(!Validate::ValidateArgumentCount(argc)){
-        #ifdef linux
-            FILE *file;
-            if(file = popen(
-                "zenity --title=\"Select an image\" --file-selection",
-                "r"
-            )){
-                char buffer[512];
-                std::string selectedPath = "";
-                while(fgets(buffer, sizeof(buffer), file) != NULL){
-                    selectedPath += buffer;
-                }
-                pclose(file);
+        path = FileDialog::GetFileName();
 
-                selectedPath.erase(std::remove(
-                    selectedPath.begin(),
-                    selectedPath.end(),
-                    '\n'
-                ), selectedPath.end());
-                path = selectedPath;
-                dialogUsed = true;
-            }
-        #endif
+        dialogUsed = path != "";
 
         if(!dialogUsed){
             printf("usage: ImageViewer <image_path>\n");

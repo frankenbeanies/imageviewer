@@ -7,3 +7,4 @@ objs
 
 #executables
 Tests/Tests 
+App/ImageViewer
